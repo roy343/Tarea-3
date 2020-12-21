@@ -1,0 +1,16 @@
+version: "1"
+services:
+  react-client:
+    image: react-app
+    ports: 
+      - "80:80"
+  node-server:
+    image: node-server
+        ports: 
+      - "3000:3000"
+      depends_on:
+        -mongo
+  mongo:
+    image: mongo:3.6.21-xenial
+        ports: 
+      - "27017:27017"
