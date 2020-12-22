@@ -11,6 +11,6 @@ services:
       depends_on:
         -mongo
   mongo:
-    image: mongo:3.6.21-xenial
+    image: mongo-db
         ports: 
       - "27017:27017"
