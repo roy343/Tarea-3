@@ -16,6 +16,6 @@ jobs:
       - name: docker build Client
         run: |
           docker build ./client -t node-server
-      - name: docker build mongo  
+      - name: docker mongo  
         run: |
-          docker build mongo:4.0
+          docker run mongo
