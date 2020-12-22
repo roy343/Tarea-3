@@ -1,0 +1,21 @@
+name: Tarea_4
+
+on: [push]
+
+jobs:
+
+  build:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v2
+        
+      - name: docker build server
+        run: |
+          docker build ./Server -t react-app 
+        
+      - name: docker build Client
+        run: |
+          docker build ./client -t node-server
+      - name: docker build mongo  
+        run: |
+          docker build mongo:3.6.21-xenial
